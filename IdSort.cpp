@@ -12,6 +12,8 @@ int main(){
     cin >>list[i];
   }
 
+  if (cin.good()){
+
   int counter;
 
   for (int j=6;j>0;j--){
@@ -48,7 +50,7 @@ int main(){
         list [z]=temp;
         counter1++;
       }
-      else if(list[z]=list[z+1]){
+      else if(list[z]==list[z+1]){
         cerr <<"Error: This ID exists.";
       }
     }
@@ -58,4 +60,8 @@ int main(){
   cout <<"The value "<<x<<" is in position "<<counter1<<endl;
 
 
+}
+  else{
+    cerr <<"Error: Invalid input";
+  }
 }
