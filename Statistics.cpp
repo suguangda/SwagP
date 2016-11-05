@@ -114,7 +114,7 @@ int main(int argc, char* argv[]){
     convertToIntArray(temp0,temp1,array);
 
     if (argc<=20){
-        if(convertToIntArray(temp0,temp1,array)<0){
+        if(convertToIntArray(temp0,temp1,array)<0||temp0<=1){
             cerr <<"Error :Argument "<<convertToIntArray(temp0,temp1,array)*-1<<" is not an integer.";
         }
         else{
