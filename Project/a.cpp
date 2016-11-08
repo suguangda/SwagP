@@ -11,30 +11,30 @@ using namespace std;
 int main()
 {
 	char input_string[50];
-	
+
 	// declare the file object
 	ifstream infile;
 	ofstream outfile;
-	
+
 	// open the file
-	infile.open("file_input.txt");
-	outfile.open("file_output.txt");
-	
+	infile.open("1.txt");
+	outfile.open("2.txt");
+
 	// read from file
 	while(infile >> input_string)
 	{
 		int count_chars = 0;
-		
+
 		while (input_string[count_chars] != 0 && count_chars < 50)
 			count_chars++;
-		
-		// output to a file		
+
+		// output to a file
 		outfile << count_chars << endl;
 	}
-	
+
 	// close the file
 	infile.close();
 	outfile.close();
-	
+
 	return 0;
 }

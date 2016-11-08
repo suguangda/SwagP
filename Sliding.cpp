@@ -5,7 +5,7 @@ using namespace std;
 int convertToIntArray(int argc, char* argv[],float array[]);
 
 int slideAvg(float Voltage[],int sampleSize, int windowSize,float SlidingAvg[]){
-    if ((sampleSize-windowSize+1)>0){
+    if ((sampleSize-windowSize+1)>0&&windowSize>0){
         for (int i=0;i<sampleSize-windowSize+1;i++){
             float sum=0;
             for (int j=0;j<windowSize;j++){
@@ -90,7 +90,7 @@ int main(int argc,char* argv[]){
                 cout <<"\n\n";
                 displayHistogram(slideAvg(array,sample,window,sliding),sliding);
             }
-            else{
+            else {
                 cerr <<"Error: Invalid window size";
             }
         }

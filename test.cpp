@@ -1,11 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc,char** argv){
-    int i=0;
-    while (*(argv[i])!='/0'){
-        cout <<*(argv[i])<<endl;
-        i++;
-    }
 
+
+void swap(char * &str1, char * &str2)
+{
+char *temp = str1;
+str1 = str2;
+str2 = temp;
+}
+
+int main()
+{
+char *str1 = "GEEKS";
+char *str2 = "FOR GEEKS";
+swap(str1, str2);
+cout<<"str1 is "<<str1<<endl;
+cout<<"str2 is "<<str2<<endl;
+return 0;
 }
